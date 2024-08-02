@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'ManifaPro2';
+  src: url('/fonts/ManifaPro2_2.224-Light.otf') format('opentype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'ManifaPro2', sans-serif; /* Apply custom font here */
+  overflow: hidden; /* Ensure no overflow */
+  transition: background-image 1s ease-in-out;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  color: white; /* Default text color */
+  font-family: 'ManifaPro2', sans-serif; /* Apply custom font here */
+  text-align: left; /* Align text to the left */
+  width: 100%; /* Ensure content fits within the container */
+}
+
+.textWhite {
+  color: rgb(255, 255, 255);
+  font-family: 'ManifaPro2', sans-serif !important;
+  font-weight: 300; /* Light weight */
+  font-size: 40px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Black overlay with 40% opacity */
+  z-index: 1; /* Below the content */
+}
+
+/* Animation for sliding text */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* Wrapper for title and subtitle to handle animations */
+.textWrapper {
+  position: absolute;
+  top: 50%;
+  left: 10%; /* Adjust the left position as needed */
+  transform: translateY(-50%); /* Center vertically */
+  text-align: left;
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out; /* Smooth transition for opacity and transform */
+}
+
+.textEntering {
+  animation: slideIn 1s ease-in-out;
+}
+
+.textExiting {
+  animation: slideOut 1s ease-in-out;
+}

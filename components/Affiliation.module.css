@@ -1,0 +1,33 @@
+.affiliationContainer {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .affiliationContainer h1 {
+    font-size: xx-large;
+  }
+  
+  .mainLogoContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space between main logo and sub logos */
+  }
+  
+  .mainLogo {
+    height: 100px; /* Adjust size as needed */
+    width: auto;
+  }
+  
+  .subLogosContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Adjust spacing between logos */
+  }
+  
+  .subLogo {
+    height: 190px; /* Adjust size as needed */
+    width: 170px; /* Ensure a fixed width for uniformity */
+    object-fit: contain; /* Ensure the image maintains aspect ratio within the fixed size */
+  }
+  

@@ -1,0 +1,31 @@
+.languageSwitcher {
+    position: fixed;
+    top: 2px; /* Adjust this value as needed */
+    left: 50px;
+    z-index: 4;
+    border-radius: 5px;
+    display: flex;
+    gap: 1px; /* Add space between the buttons */
+    color: #c0c0c0;
+    padding: 5px; /* Padding for better visibility */
+  }
+  
+  .languageSwitcher span {
+    cursor: pointer;
+    margin: 0 5px;
+    font-weight: bold;
+    color: #ffffff; /* White text for better contrast */
+  }
+  
+  .languageSwitcher span:hover {
+    text-decoration: underline;
+  }
+  
+  .activeButton {
+    color: #00A3E0; /* Blue color for active button */
+  }
+  
+  .inactiveButton {
+    color: #ffffff; /* White color for inactive button */
+  }
+  

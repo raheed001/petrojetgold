@@ -1,0 +1,74 @@
+@import url(https://db.onlinewebfonts.com/c/fc7fd845ab9062a96aaa215295bf10b3?family=FS+Joey+Bold);
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'ManifaPro';
+  src: url('/fonts/ManifaPro2_2.224 Variable.ttf') format('truetype'),
+       url('/fonts/ManifaPro2_2.224-Bold.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-BoldHiddenTashkeel.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-BoldItalic.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-Hefty.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-HeftyHiddenTashkeel.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-HeftyItalic.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-Light.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-LightHiddenTashkeel.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-LightItalic.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-Regular.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-RegularHiddenTashkeel.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-RegularItalic.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-SemiBold.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-SemiBoldHiddenTashkeel.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-SemiBoldItalic.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-Thin.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-ThinHiddenTashkeel.otf') format('opentype'),
+       url('/fonts/ManifaPro2_2.224-ThinItalic.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+* {
+  font-family: 'ManifaPro2', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* .group:hover .pointer-events-none {
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 10%, transparent 10.01%);
+  background-size: 100% 100%;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+} */
+
