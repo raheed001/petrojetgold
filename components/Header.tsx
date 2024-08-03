@@ -148,7 +148,7 @@ const Header = () => {
           <div className={styles.rightHeader}>
             <a href='/'>
               <Typography variant="h6" className={styles.logoText}>
-                <Image src="/images/newlogofull.png" alt="Petrojet Logo" width={100} height={100} className={styles.newlogoImage} />
+                <Image src="/images/newlogofull.png" alt="Petrojet Logo" className={styles.newlogoImage} />
               </Typography>
             </a>
           </div>
