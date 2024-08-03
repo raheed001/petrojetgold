@@ -1,7 +1,5 @@
 'use client';
-
 import React from 'react';
-import Image from 'next/image';
 
 const Sustainability = () => {
   const images = [
@@ -17,15 +15,12 @@ const Sustainability = () => {
       <div className="flex overflow-x-auto space-x-4 pb-4 sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 sm:overflow-visible">
         {images.map((image, index) => (
           <div key={index} className="relative w-72 flex-shrink-0 sm:w-full sm:flex-shrink sm:flex-grow h-full flex items-center justify-center lg:w-auto lg:flex-shrink-0 lg:flex-grow-0">
-            <div className="relative w-[313.6px] h-[470.4px] rounded-lg shadow-lg">
-              <Image
-                src={image.src}
-                alt={image.alt}
-                layout="fill"
-                objectFit="cover"
-                className="rounded-lg"
-              />
-            </div>
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="rounded-lg shadow-lg object-cover"
+              style={{ width: '313.6px', height: '470.4px' }}
+            />
             <div className="absolute inset-0 bg-opacity-70 flex flex-col items-center p-4">
               <h2 className="text-white text-4xl font-bold font-sans text-center">{image.title}</h2>
               <p className="text-white text-2xl font-sans text-center mt-2">{image.subtitle}</p>

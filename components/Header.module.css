@@ -4,8 +4,8 @@
 }
 
 .solidHeader {
-  background-color: #454545;
-  transition: background-color 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.7); /* Slightly transparent white */
+  transition: background-color 0.3s ease, top 0.3s ease;
 }
 
 .leftMenuItems {
@@ -13,6 +13,7 @@
   align-items: center;
   font-size: 30px;
   font-weight: 1000;
+  color: black;
 }
 
 .rightHeader {
@@ -25,12 +26,6 @@
   align-items: center;
 }
 
-/* Conditional styling */
-.homeTextColor {
-  color: #fdfdfd;
-}
-
-
 .logoImage {
   margin-right: 8px;
   height: 24px;
@@ -39,9 +34,10 @@
 
 .newlogoImage {
   margin-right: 8px;
-  width: 30%;
-  height: 30%;
-  margin-left: 65%;
+  width: 90%;
+  height: 90%;
+  margin-left: 0%;
+  margin-top: 10%;
   background-color: transparent;
   filter: brightness(0.9) contrast(1.9);
 }
@@ -58,22 +54,22 @@
 }
 
 .hideHeader {
-  top: -64px;
-  transition: top 0.3s ease;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease;
 }
 
 .showHeader {
-  top: 0;
-  transition: top 0.3s ease;
+  transform: translateY(0);
+  transition: transform 0.3s ease;
 }
 
 .drawerListItem {
-  color: #c0c0c0;
+  color: #000000;
 }
 
 .drawerListItem a,
 .leftMenuItems a {
-  color: #c0c0c0;
+  color: #000000;
   text-decoration: none;
   position: relative;
   transition: color 0.3s ease;
@@ -81,7 +77,7 @@
 
 .drawerListItem a:hover,
 .leftMenuItems a:hover {
-  color: #00A3E0;
+  color: #343434;
 }
 
 .drawerListItem a::after,
@@ -90,7 +86,7 @@
   display: block;
   width: 0;
   height: 2px;
-  background: #00A3E0;
+  background: #343434;
   transition: width 0.3s ease;
   position: absolute;
   bottom: -5px;
@@ -119,7 +115,7 @@
 
   .menuButton {
     display: flex;
-    background-color: #bf9000;
+    background-color: #000000;
   }
 
   .drawerList {
@@ -135,10 +131,10 @@
   }
 
   .newlogoImage {
-    margin-right: 8px;
-    width: 30%;
-    height: 30%;
-    margin-left: 70%;
+    margin-right: 10px;
+    width: 70%;
+    height: 70%;
+    margin-left: 20%;
   }
 }
 
@@ -187,7 +183,7 @@
   flex-direction: column;
   align-items: left;
   justify-content: center;
-  background-color: #454545;
+  background-color: #ffffff;
 }
 
 .closeButton {

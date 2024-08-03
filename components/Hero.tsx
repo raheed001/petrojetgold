@@ -7,17 +7,17 @@ const slides = [
   {
     title: 'Industry Leader in Petroleum',
     subtitle: 'Pioneering advancements in the petroleum sector.',
-    background: '/images/slide11.jpg'
+    background: '/images/slide102.jpg'
   },
   {
     title: 'Premium Fuel Solutions',
     subtitle: 'Delivering superior quality fuels tailored to your needs.',
-    background: '/images/slide33.webp'
+    background: '/images/slide103.jpg'
   },
   {
-    title: 'Expertise in Trading',
+    title: 'Expertise in  Trading',
     subtitle: 'Leveraging advanced technology for efficient trading operations.',
-    background: '/images/slide2.jpg'
+    background: '/images/slide100.png'
   },
 ];
 
@@ -57,13 +57,18 @@ const Hero = () => {
         priority
       />
       <Container maxWidth="md" className={styles.heroContent}>
+        <div className={styles.verticalText}>
+          <Typography variant="h6" component="div" className={styles.verticalTextWhite}>
+            PETROJET GOLD
+          </Typography>
+        </div>
         <div className={`${styles.textWrapper} ${isExiting ? styles.textExiting : styles.textEntering}`}>
-          <Typography variant="h2" component="h1" className={styles.textWhite}>
+          <Typography variant="h2" component="h1" className={styles.title}>
             {slides[currentSlide].title}
           </Typography>
-          <Typography variant="h5" className={styles.textWhite}>
+          {/* <Typography variant="h5" className={styles.subtitle}>
             {slides[currentSlide].subtitle}
-          </Typography>
+          </Typography> */}
         </div>
       </Container>
     </div>

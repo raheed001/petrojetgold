@@ -37,61 +37,77 @@ const teamMembers = [
 
 const AboutPage = () => {
   return (
-    <main className="container mx-auto p-4 mt-20">
-      <h1 className="text-2xl font-bold mb-4">About Us</h1>
-      <p>
-      Our strength lies in the professional and experienced team of professionals, Engineers and Technicians. We are dedicated and focused to the task for optimum results and satisfaction of the customers. We believe in providing quality service and update ourselves with all the changing international norms and standards. Our zeal to learn and keep ourselves well informed makes us different from the rest.
-      </p>
-      <div className="mt-8">
-        <h2 className="text-xl font-bold mb-4">Our Team</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {teamMembers.slice(0, 2).map((ceo, index) => (
-            <motion.div
-              key={index}
-              className="p-4 bg-white rounded-lg shadow-md"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <Image
-                src={ceo.imageUrl}
-                alt={`${ceo.name}'s picture`}
-                width={400}
-                height={300}
-                className="w-full h-48 object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-bold">{ceo.name}</h3>
-              <p className="text-gray-600">{ceo.position}</p>
-              <p className="mt-2">{ceo.introduction}</p>
-            </motion.div>
-          ))}
+    <main>
+      {/* Hero Section */}
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
+        <img
+          src="/images/aboutus.png"
+          alt="Hero"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mr-16 pr-12 ">
+            About Petrojet Gold
+          </h1>
         </div>
       </div>
-      <div className="mt-8">
-        <h2 className="text-xl font-bold mb-4"></h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {teamMembers.slice(2).map((member, index) => (
-            <motion.div
-              key={index}
-              className="p-4 bg-white rounded-lg shadow-md"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-            >
-              <Image
-                src={member.imageUrl}
-                alt={`${member.name}'s picture`}
-                width={400}
-                height={300}
-                className="w-full h-48 object-contain rounded-lg mb-4"
-              />
-              <h3 className="text-lg font-bold">{member.name}</h3>
-              <p className="text-gray-600">{member.position}</p>
-              <p className="mt-2">{member.introduction}</p>
-            </motion.div>
-          ))}
+      
+      <div className="container mx-auto p-4 mt-12 pt-10">
+        <h1 className="text-2xl font-bold mb-4">About Us</h1>
+        <p>
+          Our strength lies in the professional and experienced team of professionals, Engineers and Technicians. We are dedicated and focused to the task for optimum results and satisfaction of the customers. We believe in providing quality service and update ourselves with all the changing international norms and standards. Our zeal to learn and keep ourselves well informed makes us different from the rest.
+        </p>
+        <div className="mt-8">
+          <h2 className="text-xl font-bold mb-4">Our Team</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {teamMembers.slice(0, 2).map((ceo, index) => (
+              <motion.div
+                key={index}
+                className="p-4 bg-white rounded-lg shadow-md"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                <Image
+                  src={ceo.imageUrl}
+                  alt={`${ceo.name}'s picture`}
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-contain rounded-lg mb-4"
+                />
+                <h3 className="text-lg font-bold">{ceo.name}</h3>
+                <p className="text-gray-600">{ceo.position}</p>
+                <p className="mt-2">{ceo.introduction}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+        <div className="mt-8">
+          <h2 className="text-xl font-bold mb-4"></h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {teamMembers.slice(2).map((member, index) => (
+              <motion.div
+                key={index}
+                className="p-4 bg-white rounded-lg shadow-md"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+              >
+                <Image
+                  src={member.imageUrl}
+                  alt={`${member.name}'s picture`}
+                  width={400}
+                  height={300}
+                  className="w-full h-48 object-contain rounded-lg mb-4"
+                />
+                <h3 className="text-lg font-bold">{member.name}</h3>
+                <p className="text-gray-600">{member.position}</p>
+                <p className="mt-2">{member.introduction}</p>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </main>

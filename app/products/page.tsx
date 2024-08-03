@@ -51,17 +51,33 @@ const products = [
 
 const ProductsPage: React.FC = () => {
   return (
-    <main className="container mx-auto p-4 mt-12">
-      <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map((product, index) => (
-          <ServiceCard
-            key={index}
-            title={product.title}
-            image={product.image}
-            description={product.description}
-          />
-        ))}
+    <main>
+      {/* Hero Section */}
+      <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
+        <img
+          src="/images/productpage.png"
+          alt="Hero"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center">
+            Our Products
+          </h1>
+        </div>
+      </div>
+      
+      <div className="container mx-auto p-4 mt-12 pt-10">
+        <h1 className="text-3xl font-bold text-center mb-8">Our Products</h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          {products.map((product, index) => (
+            <ServiceCard
+              key={index}
+              title={product.title}
+              image={product.image}
+              description={product.description}
+            />
+          ))}
+        </div>
       </div>
     </main>
   );

@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'ManifaPro';
+  font-family: 'ManifaPro2';
   src: url('/fonts/ManifaPro2_2.224 Variable.ttf') format('truetype'),
        url('/fonts/ManifaPro2_2.224-Bold.otf') format('opentype'),
        url('/fonts/ManifaPro2_2.224-BoldHiddenTashkeel.otf') format('opentype'),

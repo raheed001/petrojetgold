@@ -91,7 +91,7 @@ const Header = () => {
     <>
       <AppBar
         position="fixed"
-        className={`${isScrolled ? styles.solidHeader : styles.transparentHeader} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
+        className={`${styles.solidHeader} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
         style={{ boxShadow: 'none' }}
       >
         <Toolbar>
@@ -148,8 +148,7 @@ const Header = () => {
           <div className={styles.rightHeader}>
             <a href='/'>
               <Typography variant="h6" className={styles.logoText}>
-                <Image src="/images/logo.png" alt="Petrojet Logo" width={100} height={50} className={styles.newlogoImage} />
-                <Image src="/images/output.png" alt="Petrojet Logo" width={100} height={50} className={styles.logoImage} />
+                <Image src="/images/newlogofull.png" alt="Petrojet Logo" width={100} height={100} className={styles.newlogoImage} />
               </Typography>
             </a>
           </div>
