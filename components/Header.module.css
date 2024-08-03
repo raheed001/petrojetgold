@@ -32,7 +32,7 @@
   margin-left: 8px;
 }
 
-.newlogoImage {
+/* .newlogoImage {
   margin-right: 8px;
   width: 90%;
   height: 90%;
@@ -51,7 +51,7 @@
   height: 100%;
   background: rgba(255, 255, 255, 0.5);
   z-index: -1;
-}
+} */
 
 .hideHeader {
   transform: translateY(-100%);
