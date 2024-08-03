@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
 import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import CloseIcon from '@mui/icons-material/Close';
@@ -59,27 +60,26 @@ const Header = () => {
     setDrawerOpen(false);
   };
 
-  const linkColorClass = pathname === '/' ? styles.homeTextColor : styles.otherTextColor;
+  console.log('Current pathname:', pathname);
 
   const menuItems = (
     <>
-      <Button className={linkColorClass}>
+      <Button>
         <Link href="/" passHref className={styles.leftMenuItems}>
           Home
         </Link>
       </Button>
-      <Button className={linkColorClass}>
+      <Button>
         <Link href="/about" passHref className={styles.leftMenuItems}>
           About
         </Link>
       </Button>
-    
-      <Button className={linkColorClass}>
+      <Button>
         <Link href="/products" passHref className={styles.leftMenuItems}>
           Products
         </Link>
       </Button>
-      <Button className={linkColorClass}>
+      <Button>
         <Link href="/contact" passHref className={styles.leftMenuItems}>
           Contact
         </Link>
@@ -128,7 +128,6 @@ const Header = () => {
                       <ListItemText primary="About" />
                     </Link>
                   </ListItem>
-                  
                   <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
                     <Link href="/products" passHref>
                       <ListItemText primary="Products" />
@@ -147,12 +146,12 @@ const Header = () => {
           )}
           <div style={{ flexGrow: 1 }}></div>
           <div className={styles.rightHeader}>
-              <a href='/'   >
-              <Typography variant="h6" className={`${styles.logoText} ${linkColorClass}`}>
-              <img src="/images/logo.png" alt="Petrojet Logo" className={styles.newlogoImage} />
-              <img src="/images/output.png" alt="Petrojet Logo" className={styles.logoImage} />
+            <a href='/'>
+              <Typography variant="h6" className={styles.logoText}>
+                <Image src="/images/logo.png" alt="Petrojet Logo" width={100} height={50} className={styles.newlogoImage} />
+                <Image src="/images/output.png" alt="Petrojet Logo" width={100} height={50} className={styles.logoImage} />
               </Typography>
-              </a>
+            </a>
           </div>
         </Toolbar>
       </AppBar>

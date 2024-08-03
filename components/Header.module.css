@@ -11,8 +11,8 @@
 .leftMenuItems {
   display: flex;
   align-items: center;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 30px;
+  font-weight: 1000;
 }
 
 .rightHeader {
@@ -30,11 +30,6 @@
   color: #fdfdfd;
 }
 
-.otherTextColor {
-  color: #8f8f8f;
-  font-size: 20px;
-  font-weight: bold;
-}
 
 .logoImage {
   margin-right: 8px;

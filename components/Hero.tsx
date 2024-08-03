@@ -1,6 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { Typography, Container } from '@mui/material';
 import styles from './Hero.module.css';
+import Image from 'next/image';
 
 const slides = [
   {
@@ -20,31 +21,43 @@ const slides = [
   },
 ];
 
-
 const Hero = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [animationClass, setAnimationClass] = useState(styles.textEntering);
+  const [isExiting, setIsExiting] = useState(false);
+  const timeoutRef = useRef<number | null>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setAnimationClass(styles.textExiting);
-      setTimeout(() => {
+    const handleSlideChange = () => {
+      setIsExiting(true);
+      timeoutRef.current = window.setTimeout(() => {
         setCurrentSlide((prev) => (prev + 1) % slides.length);
-        setAnimationClass(styles.textEntering);
-      }, 1000); // Match the duration of the exit animation
-    }, 5000);
+        setIsExiting(false);
+      }, 1000); 
+    };
 
-    return () => clearInterval(interval);
+    const interval = setInterval(handleSlideChange, 5000);
+
+    return () => {
+      clearInterval(interval);
+      if (timeoutRef.current !== null) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
   }, []);
 
   return (
-    <div
-      className={styles.hero}
-      style={{ backgroundImage: `url(${slides[currentSlide].background})` }}
-    >
+    <div className={styles.hero}>
       <div className={styles.overlay}></div>
+      <Image 
+        src={slides[currentSlide].background}
+        alt={slides[currentSlide].title}
+        layout="fill"
+        objectFit="cover"
+        quality={100}
+        priority
+      />
       <Container maxWidth="md" className={styles.heroContent}>
-        <div className={`${styles.textWrapper} ${animationClass}`}>
+        <div className={`${styles.textWrapper} ${isExiting ? styles.textExiting : styles.textEntering}`}>
           <Typography variant="h2" component="h1" className={styles.textWhite}>
             {slides[currentSlide].title}
           </Typography>
