@@ -40,11 +40,12 @@ const AboutPage = () => {
     <main>
       {/* Hero Section */}
       <div className="relative w-full h-[50vh] sm:h-[60vh] md:h-[70vh]">
-        <img
-          src="/images/aboutus.png"
-          alt="Hero"
-          className="w-full h-full object-cover"
-        />
+      <Image
+  src="/images/aboutus.png"
+  alt="Hero"
+  className="w-full h-full object-cover"
+  layout="fill"
+/>
         <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white text-center mr-16 pr-12 ">
             About Petrojet Gold

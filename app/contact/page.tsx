@@ -21,7 +21,7 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="container mx-auto p-4 mt-12">
+    <main className="container mx-auto p-4 mt-48">
       <h1 className="text-3xl font-bold text-center mb-8">Contact Us</h1>
       <form ref={form} onSubmit={sendEmail} className="bg-white shadow-md rounded-lg p-8 max-w-lg mx-auto">
         <div className="mb-6">

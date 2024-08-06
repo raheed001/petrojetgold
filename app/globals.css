@@ -2,7 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* 
 @font-face {
   font-family: 'ManifaPro2';
   src: url('/fonts/ManifaPro2_2.224 Variable.ttf') format('truetype'),
@@ -26,7 +26,7 @@
        url('/fonts/ManifaPro2_2.224-ThinItalic.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -41,9 +41,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
-* {
-  font-family: 'ManifaPro2', sans-serif;
-}
+
 
 body {
   margin: 0;

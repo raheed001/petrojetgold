@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://petrojetgold.com
+
+# Sitemaps
+Sitemap: https://petrojetgold.com/sitemap.xml

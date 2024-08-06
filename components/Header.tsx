@@ -71,7 +71,7 @@ const Header = () => {
       </Button>
       <Button>
         <Link href="/about" passHref className={styles.leftMenuItems}>
-          About
+          About Us
         </Link>
       </Button>
       <Button>
@@ -92,7 +92,7 @@ const Header = () => {
       <AppBar
         position="fixed"
         className={`${styles.solidHeader} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
-        style={{ boxShadow: 'none' }}
+        style={{ boxShadow: 'none', paddingTop: '20px' }} // Add padding top to shift header down
       >
         <Toolbar>
           {isMobile ? (
@@ -125,7 +125,7 @@ const Header = () => {
                   </ListItem>
                   <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
                     <Link href="/about" passHref>
-                      <ListItemText primary="About" />
+                      <ListItemText primary="About Us" />
                     </Link>
                   </ListItem>
                   <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
@@ -148,7 +148,7 @@ const Header = () => {
           <div className={styles.rightHeader}>
             <a href='/'>
               <Typography variant="h6" className={styles.logoText}>
-                <Image src="/images/newlogofull.png" alt="Petrojet Logo" width={100} height={100} className={styles.newlogoImage} />
+                <Image src="/images/newlogofull.png" alt="Petrojet Logo" width={120} height={120} className={styles.newlogoImage} />
               </Typography>
             </a>
           </div>

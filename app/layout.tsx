@@ -19,14 +19,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <meta name="author" content="Petrojet Gold" />
         <meta property="og:title" content="Petrojet Gold - Petroleum, Gold Trading, Crude Oil, Jet Fuel" />
         <meta property="og:description" content="Petrojet Gold provides reliable solutions in petroleum, gold trading, crude oil, and jet fuel. Learn more about our services." />
-        <meta property="og:image" content="/images/og-image.jpg" />
-        <meta property="og:url" content="https://www.petrojetgold.com" />
+        <meta property="og:image" content="/images/newlogofull.png" />
+        <meta property="og:url" content="https://petrojetgold.com" />
         <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Petrojet Gold - Petroleum, Gold Trading, Crude Oil, Jet Fuel" />
-        <meta name="twitter:description" content="Petrojet Gold offers comprehensive solutions in petroleum, gold trading, crude oil, and jet fuel. Explore our services." />
-        <meta name="twitter:image" content="/images/twitter-image.jpg" />
-        <meta name="twitter:site" content="@YourTwitterHandle" />
+        
       </Head>
       <body>
         <Header />
