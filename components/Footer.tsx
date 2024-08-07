@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
         { href: '#terms', name: 'Terms of Service' },
         { href: '#license', name: 'License Agreement' },
         { href: '#privacy', name: 'Privacy Policy' },
-        { href: '#about-us', name: 'About Us' },
+        { href: '/about', name: 'About Us' },
       ]
     },
   ];
