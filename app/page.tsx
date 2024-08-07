@@ -13,11 +13,7 @@ export default function HomePage() {
 
   return (
     <main>
-      
-     
       {/* <LanguageSwitcher /> */}
-     
-     
       <Hero />
       <div className="container mx-auto p-4">
         <div className="">
@@ -28,6 +24,14 @@ export default function HomePage() {
         </div>
         <Testimonial />
       </div>
+      <a 
+        href="https://wa.me/971509786080"
+        className="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/images/whatsapplogo.webp" alt="WhatsApp" />
+      </a>
     </main>
   );
 }
