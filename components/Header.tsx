@@ -8,6 +8,7 @@ import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem
 import DensityMediumIcon from '@mui/icons-material/DensityMedium';
 import CloseIcon from '@mui/icons-material/Close';
 import styles from './Header.module.css';
+import HeaderTop from './HeaderTop';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState<boolean>(false);
@@ -89,10 +90,11 @@ const Header = () => {
 
   return (
     <>
+      <HeaderTop />
       <AppBar
         position="fixed"
         className={`${styles.solidHeader} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
-        style={{ boxShadow: 'none', paddingTop: '20px' }} // Add padding top to shift header down
+        style={{ boxShadow: 'none', top: '40px', zIndex: 49 }}
       >
         <Toolbar>
           {isMobile ? (

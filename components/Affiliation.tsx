@@ -6,7 +6,7 @@ import Image from 'next/image';
 const Affiliation = () => {
   return (
     <div className="p-4 md:p-8 rounded-lg shadow-md mx-auto max-w-screen-lg">
-      <h1 className="text-center text-2xl font-bold mb-6">We Are a Proud Company of</h1>
+      <h1 className="text-center text-2xl font-bold mb-6">We are a Proud Group of Companies</h1>
       <div className="flex justify-center mb-6">
         <div className="w-1/2 md:w-1/4 rounded-lg shadow-lg relative">
           <Image 

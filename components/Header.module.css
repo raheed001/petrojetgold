@@ -59,11 +59,13 @@ margin-right: 10%;
 .hideHeader {
   transform: translateY(-100%);
   transition: transform 0.3s ease;
+  top: -150px;
 }
 
 .showHeader {
   transform: translateY(0);
   transition: transform 0.3s ease;
+  top: 0;
 }
 
 .drawerListItem {
