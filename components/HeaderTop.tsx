@@ -7,7 +7,7 @@ const HeaderTop = () => {
     <div className="bg-black text-white text-sm py-2 fixed top-0 w-full z-50">
       <div className="max-w-screen-xl mx-auto flex justify-between items-center px-4 md:px-8">
         <div>
-          <a href="mailto:info@petrojetgold.com" className="hover:underline">info@petrojetgold.com</a>
+          <a href="mailto:info@petrojetgold.com" className="hover:underline"> Enquires:info@petrojetgold.com</a>
         </div>
         <div className="flex items-center">
           <FaMapMarkerAlt className="mr-1" />
