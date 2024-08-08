@@ -117,31 +117,123 @@ margin-right: 10%;
   .MuiButtonBase-root {
     display: none;
   }
-
-  .menuButton {
-    display: flex;
-    background-color: #000000;
+  .solidHeader {
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: background-color 0.3s ease, top 0.3s ease;
+    
   }
+/* Header.module.css */
+.iconMenuSvg {
+  width: 30px; /* Adjust width as needed */
+  height: 30px; /* Adjust height as needed */
+  max-width: 30px; /* Ensure the max-width is set */
+  max-height: 30px; /* Ensure the max-height is set */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
 
-  .drawerList {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-  }
+.iconMenu {
+  z-index: 999;
+  position: absolute;
+  cursor: pointer;
+  
+  left: 1em;
+  transition: left 0.2s linear;
+}
 
-  .drawerListItem {
-    padding: 16px;
-    text-align: center;
-    color: #c0c0c0;
-  }
+.iconMenu.clicked {
+  left: 2em;
+}
+
+.iconMenuSvg .line {
+  transition: 0.4s;
+  stroke: #000; /* Color of the lines */
+  stroke-width: 20px; /* Adjust stroke width for better visibility */
+  stroke-linecap: round;
+}
+
+
+.line1 {
+  transform-origin: center;
+}
+
+.line2 {
+  transform-origin: center;
+}
+
+.line3 {
+  transform-origin: center;
+}
+
+.iconMenu.clicked .line1 {
+  transform: rotate(45deg);
+}
+
+.iconMenu.clicked .line2 {
+  opacity: 0;
+}
+
+.iconMenu.clicked .line3 {
+  transform: rotate(-45deg);
+}
+
+.drawer {
+  position: fixed;
+  top: 81px;
+  left: 0;
+  width: 250px;
+  height: 30vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 998;
+}
+
+.drawer.clicked {
+  transform: translateX(0);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.linkCon {
+  margin: 1em 0;
+}
+
+.para {
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+.hideHeader {
+  top: -100px;
+  transition: top 0.3s;
+}
+
+.showHeader {
+  top: 0;
+  transition: top 0.3s;
+}
+
+
+
+
 
   .newlogoImage {
     margin-top: 10px;
     width: 100px; /* Adjust the width as needed */
     height: 60px; /* Adjust the height as needed */
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-right: 0; /* Remove right margin */
+    margin-left: 50%;
   }
+
+  
+
+
 }
 
 .MuiButtonBase-root {
@@ -182,7 +274,7 @@ margin-right: 10%;
 }
 
 /* New styles for full-screen drawer */
-.fullScreenDrawer {
+/* .fullScreenDrawer {
   width: 100% !important;
   height: auto !important;
   display: flex;
@@ -196,5 +288,7 @@ margin-right: 10%;
   display: flex;
   justify-content: left;
   padding: 16px;
+  margin-top: 10%;
   width: 100%;
-}
+} */
+

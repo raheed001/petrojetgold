@@ -4,18 +4,16 @@ import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { AppBar, Toolbar, Typography, Button, IconButton, Drawer, List, ListItem, ListItemText } from '@mui/material';
-import DensityMediumIcon from '@mui/icons-material/DensityMedium';
-import CloseIcon from '@mui/icons-material/Close';
+import { AppBar, Toolbar, Typography, IconButton, Button } from '@mui/material';
 import styles from './Header.module.css';
 import HeaderTop from './HeaderTop';
 
 const Header = () => {
-  const [isScrolled, setIsScrolled] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const [drawerOpen, setDrawerOpen] = useState<boolean>(false);
-  const [lastScrollTop, setLastScrollTop] = useState<number>(0);
-  const [isScrollingDown, setIsScrollingDown] = useState<boolean>(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [drawerOpen, setDrawerOpen] = useState(false);
+  const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -47,46 +45,15 @@ const Header = () => {
     };
   }, [lastScrollTop]);
 
-  const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-    if (
-      event.type === 'keydown' &&
-      ((event as React.KeyboardEvent).key === 'Tab' || (event as React.KeyboardEvent).key === 'Shift')
-    ) {
-      return;
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  };
+
+  const handleMenuItemClick = () => {
+    if (isMobile) {
+      setDrawerOpen(false);
     }
-    setDrawerOpen(open);
   };
-
-  const closeDrawer = () => {
-    setDrawerOpen(false);
-  };
-
-  console.log('Current pathname:', pathname);
-
-  const menuItems = (
-    <>
-      <Button>
-        <Link href="/" passHref className={styles.leftMenuItems}>
-          Home
-        </Link>
-      </Button>
-      <Button>
-        <Link href="/about" passHref className={styles.leftMenuItems}>
-          About Us
-        </Link>
-      </Button>
-      <Button>
-        <Link href="/products" passHref className={styles.leftMenuItems}>
-          Products
-        </Link>
-      </Button>
-      <Button>
-        <Link href="/contact" passHref className={styles.leftMenuItems}>
-          Contact
-        </Link>
-      </Button>
-    </>
-  );
 
   return (
     <>
@@ -94,7 +61,7 @@ const Header = () => {
       <AppBar
         position="fixed"
         className={`${styles.solidHeader} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
-        style={{ boxShadow: 'none', top: '40px', zIndex: 49 }}
+        style={{ boxShadow: 'none', top: '40px', zIndex: 49, marginTop: '-2%', paddingTop: '2%' }}
       >
         <Toolbar>
           {isMobile ? (
@@ -103,48 +70,66 @@ const Header = () => {
                 edge="start"
                 color="inherit"
                 aria-label="menu"
-                onClick={toggleDrawer(true)}
-                className={styles.menuButton}
+                onClick={toggleDrawer}
+                className={`${styles.iconMenu} ${drawerOpen ? styles.clicked : ''}`}
               >
-                <DensityMediumIcon />
+                <svg className={styles.iconMenuSvg} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 250">
+                  <title>Menu</title>
+                  <g>
+                    <line className={`${styles.line} ${styles.line1} ${drawerOpen ? styles.clicked : ''}`} x1="20" y1="30" x2="190" y2="30"></line>
+                    <line className={`${styles.line} ${styles.line2} ${drawerOpen ? styles.clicked : ''}`} x1="20" y1="90" x2="150" y2="90"></line>
+                    <line className={`${styles.line} ${styles.line3} ${drawerOpen ? styles.clicked : ''}`} x1="20" y1="150" x2="190" y2="150"></line>
+                  </g>
+                </svg>
               </IconButton>
-              <Drawer
-                anchor="right"
-                open={drawerOpen}
-                onClose={toggleDrawer(false)}
-                classes={{ paper: styles.fullScreenDrawer }}
-              >
-                <List className={styles.drawerList}>
-                  <ListItem className={styles.closeButton}>
-                    <IconButton onClick={toggleDrawer(false)} color="inherit">
-                      <CloseIcon />
-                    </IconButton>
-                  </ListItem>
-                  <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
+              <div className={`${styles.drawer} ${drawerOpen ? styles.clicked : ''}`}>
+                <div className={styles.links}>
+                  <div className={`${styles.linkCon} ${drawerOpen ? styles.clicked : ''}`}>
                     <Link href="/" passHref>
-                      <ListItemText primary="Home" />
+                      <p className={styles.para} onClick={handleMenuItemClick}>Home</p>
                     </Link>
-                  </ListItem>
-                  <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
+                  </div>
+                  <div className={`${styles.linkCon} ${drawerOpen ? styles.clicked : ''}`}>
                     <Link href="/about" passHref>
-                      <ListItemText primary="About Us" />
+                      <p className={styles.para} onClick={handleMenuItemClick}>About Us</p>
                     </Link>
-                  </ListItem>
-                  <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
+                  </div>
+                  <div className={`${styles.linkCon} ${drawerOpen ? styles.clicked : ''}`}>
                     <Link href="/products" passHref>
-                      <ListItemText primary="Products" />
+                      <p className={styles.para} onClick={handleMenuItemClick}>Products</p>
                     </Link>
-                  </ListItem>
-                  <ListItem className={styles.drawerListItem} onClick={closeDrawer}>
+                  </div>
+                  <div className={`${styles.linkCon} ${drawerOpen ? styles.clicked : ''}`}>
                     <Link href="/contact" passHref>
-                      <ListItemText primary="Contact" />
+                      <p className={styles.para} onClick={handleMenuItemClick}>Contact</p>
                     </Link>
-                  </ListItem>
-                </List>
-              </Drawer>
+                  </div>
+                </div>
+              </div>
             </>
           ) : (
-            <div className={styles.leftMenuItems}>{menuItems}</div>
+            <div className={styles.leftMenuItems}>
+              <Button>
+                <Link href="/" passHref className={styles.leftMenuItems}>
+                  Home
+                </Link>
+              </Button>
+              <Button>
+                <Link href="/about" passHref className={styles.leftMenuItems}>
+                  About Us
+                </Link>
+              </Button>
+              <Button>
+                <Link href="/products" passHref className={styles.leftMenuItems}>
+                  Products
+                </Link>
+              </Button>
+              <Button>
+                <Link href="/contact" passHref className={styles.leftMenuItems}>
+                  Contact
+                </Link>
+              </Button>
+            </div>
           )}
           <div style={{ flexGrow: 1 }}></div>
           <div className={styles.rightHeader}>
