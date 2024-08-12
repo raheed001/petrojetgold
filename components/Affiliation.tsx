@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const Affiliation = () => {
   return (
-    <div className="p-4 md:p-8 rounded-lg shadow-md mx-auto ">
+    <div className="p-4 md:p-8 rounded-lg  mx-auto ">
       <h1 className="text-center text-2xl font-bold mb-6">We are a Proud Group of Companies</h1>
       
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-8 gap-4">

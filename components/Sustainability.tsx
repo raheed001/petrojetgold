@@ -12,7 +12,7 @@ const Sustainability = () => {
 
   return (
     <div className="p-4 md:p-8 mx-auto">
-      <h1 className="text-left text-2xl font-bold mb-6 pl-8">Our Sustainability Efforts</h1>
+      <h1 className="text-2xl font-bold mb-6 pl-8 text-center">Our Sustainability Efforts</h1>
       <div className="flex overflow-x-auto space-x-4 pb-4 sm:grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 sm:overflow-visible">
         {images.map((image, index) => (
           <div key={index} className="relative w-72 flex-shrink-0 sm:w-full sm:flex-shrink sm:flex-grow h-full flex items-center justify-center lg:w-auto lg:flex-shrink-0 lg:flex-grow-0  transform transition-transform duration-300 hover:scale-105">

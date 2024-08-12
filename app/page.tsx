@@ -17,8 +17,9 @@ export default function HomePage() {
       <Hero />
       <div className="container mx-auto p-4">
         <div className="">
+        <Affiliation />
           <Sustainability />
-          <Affiliation />
+          
           {/* <ServiceCard title={t('exploration')} image="/images/service1.jpg" />
           <ServiceCard title={t('drilling')} image="/images/service2.jpg" /> */}
         </div>

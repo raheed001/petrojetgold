@@ -63,7 +63,7 @@ export default function ContactPage() {
         </div>
         <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex flex-col items-center">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.063069412627!2d55.394442375678445!3d25.33566457762202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bb9df9bda31%3A0x499f60f6db1262aa!2sPetrojet%20Gold!5e0!3m2!1sen!2sae!4v1723104266303!5m2!1sen!2sae"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3606.19482740215!2d55.39137292538618!3d25.331242577624923!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5bb9df9bda31%3A0x499f60f6db1262aa!2sPetrojet%20Gold!5e0!3m2!1sen!2sae!4v1723461741735!5m2!1sen!2sae"
             width="600"
             height="450"
             style={{ border: 0 }}
