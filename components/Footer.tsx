@@ -30,9 +30,9 @@ const Footer: React.FC = () => {
     {
       label: "Company",
       items: [
-        { href: '#terms', name: 'Terms of Service' },
-        { href: '#license', name: 'License Agreement' },
-        { href: '#privacy', name: 'Privacy Policy' },
+        { href: '/terms-of-service', name: 'Terms of Service' },
+        { href: '/license-agreement', name: 'License Agreement' },
+        { href: '/privacy-policy', name: 'Privacy Policy' },
         { href: '/about', name: 'About Us' },
       ]
     },
