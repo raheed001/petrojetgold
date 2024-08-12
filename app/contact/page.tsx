@@ -8,7 +8,7 @@ export default function ContactPage() {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_lbr41bp', 'template_j13duds', form.current!, 'dG9stlsdfeTVDvO6R')
+    emailjs.sendForm('service_xxvvnxc', 'template_e466vx6', form.current!, '_9bCzjQmihS9qlYfz')
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         alert("Message sent successfully!");
