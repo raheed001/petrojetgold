@@ -8,6 +8,10 @@
   transition: background-color 0.3s ease, top 0.3s ease;
   
 }
+.solidHeader.scrolled {
+  background-color: rgba(255, 255, 255, 1); /* Solid white */
+}
+
 
 .leftMenuItems {
   display: flex;

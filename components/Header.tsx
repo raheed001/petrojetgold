@@ -60,7 +60,7 @@ const Header = () => {
       <HeaderTop />
       <AppBar
         position="fixed"
-        className={`${styles.solidHeader} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
+        className={`${styles.solidHeader} ${isScrolled ? styles.scrolled : ''} ${isScrollingDown ? styles.hideHeader : styles.showHeader}`}
         style={{ boxShadow: 'none', top: '40px', zIndex: 49, marginTop: '-2%', paddingTop: '2%' }}
       >
         <Toolbar>

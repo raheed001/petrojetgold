@@ -35,6 +35,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
       </Head>
       <body>
         <Header />
+        <a 
+        href="https://wa.me/971509786080"
+        className="whatsapp-button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img src="/images/whatsapplogo.webp" alt="WhatsApp" />
+      </a>
         {children}
         <Footer />
       </body>
